@@ -23,7 +23,7 @@ def trbs_empirical(graph, obs_time_filt, distribution):
     path_lengths = compute_mean_shortest_path(path_lengths)
 
     ### Run the estimation
-    s_est, scores = se.source_estimate(graph, obs_time_filt, path_lengths)
+    s_est, scores = se.source_estimate_corr(graph, obs_time_filt, path_lengths)
 
     return (s_est, scores)
 
